@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="./views/widgets/navigationBar/navigationBar.css">
+
+<div class="row NavigationHeadMenu">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="col-md-4 headMenuLeft">
+                <strong>Welcome to Music Store.</strong>
+            </div>
+            <div class="col-md-8 headMenuRight"> <!--ng-init="checkLogin()"-->
+                <div class="container-fluid" ng-show="!isAuthData">
+                    <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#/login" style="font-size:15px; color: #FFFFFF">LOGIN<span class="sr-only"></span></a></li>
+                            <li><a href="#/register" style="font-size:15px; color: #FFFFFF">REGISTER</a></li>
+                        </ul>
+                    </ul>
+                </div><!-- /.container-fluid -->
+
+                <div class="container-fluid" ng-show="isAuthData">
+                    <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#" style="font-size:15px; color: #FFFFFF" ng-click="logiut()">LOGOUT<span class="sr-only"></span></a href="#"></li>
+                        </ul>
+                    </ul>
+                </div><!-- /.container-fluid -->
+            </div>
+        </div>
+    </div>
+</div>

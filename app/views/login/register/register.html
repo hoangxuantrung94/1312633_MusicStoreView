@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="./views/login/register/register.css">
+
+<div class="login">
+    <div class="row">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <a href="#"><img class="logoImg" src="./images/MainIcon.ico"></a>
+                    </div>
+                </div>
+                <div class="col-md-8"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dialog-register">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Register</h4>
+                </div>
+                <div class="modal-body">
+                    <form name="signUpForm">
+                        <div class="form-group"
+                             ng-class="{'has-error': signUpForm.newEmail.$invalid && (signUpForm.$submitted || signUpForm.newEmail.$touched || signUpForm.newEmail.$dirty)}">
+                            <input name="newEmail" type="email" placeholder="Enter Email"
+                                   class="form-control input-md" ng-model="newEmail" required>
+                            <div class="error-message">
+                                <span class="help-block" ng-show="signUpForm.newEmail.$error.required">Please input email!</span>
+                                <span class="help-block" ng-show="signUpForm.newEmail.$error.email">Email is invalid, please try again!</span>
+                            </div>
+                        </div>
+                        <div class="form-group"
+                             ng-class="{'has-error': signUpForm.newPassword.$invalid && (signUpForm.$submitted || signUpForm.newPassword.$touched || signUpForm.newPassword.$dirty)}">
+                            <input name="newPassword" type="password" placeholder="Enter Password"
+                                   class="form-control input-md" ng-model="newPassword" required>
+                            <div class="error-message">
+                                                    <span class="help-block"
+                                                          ng-show="signUpForm.newPassword.$error.required">Please input password!</span>
+                            </div>
+                        </div>
+                        <div class="form-group"
+                             ng-class="{'has-error': signUpForm.confirmPassword.$invalid && (signUpForm.$submitted || signUpForm.confirmPassword.$touched || signUpForm.confirmPassword.$dirty)}">
+                            <input name="confirmPassword" type="password" placeholder="Enter Confirm Password"
+                                   class="form-control input-md" ng-model="confirmPassword" required>
+                            <div class="error-message">
+                                                    <span class="help-block"
+                                                          ng-show="signUpForm.confirmPassword.$error.required">Please input confirm password!</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span style="color: #a94442;">{{Error}}</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" ng-disabled="isSignUpProcess"
+                            ng-click="createAccount()"><i class="fa" ng-class="{'fa-user-plus': !isSignUpProcess, 'fa-circle-o-notch fa-spin': isSignUpProcess}"></i>
+                        Sign Up
+                    </button>
+                    <!--button type="button" class="btn btn-default" data-dismiss="modal">Close</button-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

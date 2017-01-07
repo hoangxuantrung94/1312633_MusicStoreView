@@ -1,0 +1,14 @@
+
+.row{
+    background: black;
+    padding-bottom: 25px;
+}
+.row-footer{
+    background: #a6a6a6;
+    padding-top: 20px;
+}
+.copy{
+
+    height: 50px;
+    text-align: center;
+}

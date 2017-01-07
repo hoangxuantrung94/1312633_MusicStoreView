@@ -1,0 +1,133 @@
+.row{
+    background: #000;
+}
+.row.headMenu{
+    background: #1a1a1a;
+    padding-top: 80px;
+}
+.headMenuLeft{
+    padding-top: 15px;
+}
+.headMenuRight{
+    /*text-align: right;*/
+}
+.logo{
+    height: 100px;
+    width: 100px;
+    padding-top: 20px;
+}
+.logoImg{
+
+    height: 60px;
+    width: 60px;
+}
+.menu{
+    padding-top: 30px;
+}
+.gioiThieu{
+    /*text-align: center;*/
+    font-size: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.gioiThieuText{
+    font-size: 18px;
+}
+.colorTextWhite{
+    color:#fff;
+}
+.colorTextRed{
+    color:#ff3333;
+}
+.Glyphicons-icon{
+    color: #ff3333;
+    font-size: 50px;
+}
+.services{
+    padding-bottom: 50px;
+}
+.serviceItem{
+    color:#fff;
+}
+.titile{
+    color:#fff;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.location{
+    padding-bottom: 10px;
+}
+.btn-byNow{
+    /*padding-bottom: 10px;*/
+}
+.btn-readMore{
+    /*padding-bottom: 20px;*/
+}
+.BLOG{
+    padding-bottom: 120px;
+}
+.EVENTS{
+    padding-bottom: 120px;
+}
+.latest-content-info{
+    background: #000;
+    text-align: center;
+}
+.text-center{
+    text-align: center;
+}
+.conten{
+    background: #1a1a1a;
+    color: #fff;
+}
+.icon{
+    font-size: 40px;
+    /*background: #4d4d4d;*/
+}
+.list-result{
+    padding-top: 60px;
+}
+.row-item-result{
+    padding-top: 50px;
+}
+.item-result{
+    padding-top: 40px;
+}
+.album{
+    color:#ff3333;
+    font-size: 15px;
+}
+.img_album{
+    height: 500px;
+}
+.stt{
+    text-align: center;
+    background: #ff3333;
+    color: #fff;
+}
+#songs{
+    color: #fff;
+}
+.song{
+    padding-top: 5px;
+}
+.sst{
+    text-align: center;
+    background:#ff3333;
+}
+.name{
+    background: #1a1a1a;
+}
+.play{
+    text-align: right;
+    background: #1a1a1a;
+}
+.buy{
+    text-align: right;
+    background: #1a1a1a;
+}
+.download{
+    text-align: right;
+    background: #1a1a1a;
+}

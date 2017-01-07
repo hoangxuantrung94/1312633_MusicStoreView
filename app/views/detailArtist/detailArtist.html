@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="./views/artist/artist.css">
+
+<div class="row">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <div class="logo">
+                    <a href="#"><img class="logoImg" src="./images/MainIcon.ico"></a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="menu">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav navbar-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#/home" style="font-size:15px; color: #FFFFFF">HOME<span class="sr-only"></span></a></li>
+                                <li><a class="artist" href="#/artist" >ARTIST</a></li>
+                                <li><a href="#/album" style="font-size:15px; color: #FFFFFF">ALBUM</a></li>
+                                <li><a href="#/genre" style="font-size:15px; color: #FFFFFF">GENRE</a></li>
+                                <li><a href="#/cart" style="font-size:15px; color: #FFFFFF"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">{{ cartCount1 }}</span></a></li>
+                                <li><a href="#" style="font-size:15px; color: #FFFFFF">CONTACT US</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row headMenu">
+    <div class="container">
+        <div class="col-md-12 gioiThieu">
+            <p class="colorTextWhite"><strong>ARTISTS</strong></p>
+            <p class="colorTextRed gioiThieuText">Donec porttitor quam nunc vitae semper sem fringilla.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="nameArtist">
+                <h3>Name: {{ artist.DisplayName }}</h3>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="Nation">
+                <h3>Nation: {{ artist.Nation }}</h3>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="Description">
+                <h3>Description: {{ artist.Description }}</h3>
+            </div>
+        </div>
+    </div>
+</div>

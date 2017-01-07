@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="./views/genre/genre.css">
+
+<div class="row">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <div class="logo">
+                    <a href="#"><img class="logoImg" src="./images/MainIcon.ico"></a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="menu">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav navbar-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#/home" style="font-size:15px; color: #FFFFFF">HOME<span class="sr-only"></span></a></li>
+                                <li><a href="#/artist" style="font-size:15px; color: #FFFFFF">ARTIST</a></li>
+                                <li><a href="#/album" style="font-size:15px; color: #FFFFFF">ALBUM</a></li>
+                                <li><a class="genre" href="#/genre">GENRE</a></li>
+                                <li><a href="#/cart" style="font-size:15px; color: #FFFFFF"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">{{ cartCount1 }}</span></a></li>
+                                <li><a href="#" style="font-size:15px; color: #FFFFFF">CONTACT US</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row headMenu">
+    <div class="container">
+        <div class="col-md-12 gioiThieu">
+            <p class="colorTextWhite"><strong>GENRE</strong></p>
+            <p class="colorTextRed gioiThieuText">Donec porttitor quam nunc vitae semper sem fringilla.</p>
+        </div>
+    </div>
+</div>
+
+<!--{{ genre.DisplayName }}-->
+<div class="row">
+    <div class="container">
+        <!--Genre-->
+        <div class="col-md-12 list-result">
+            <ul id="tabsGenre" class="nav nav-tabs text-center">
+                <li class="itemTab"><button type="button" class="btn btn-danger tab" data-toggle="tab" href="#AllGenre">All</button></li>
+                <!-- use ng-init li ng-repeat="genre in genres"><a class="tab" data-toggle="tab" href="#{{ genre._id }}">{{ genre.DisplayName }}</a></li-->
+                <li class="itemTab" ng-repeat="genre in genres"><button type="button" class="btn btn-danger tab " data-toggle="tab" href="#tabGenre" ng-click="getSongGenre(genre._id)">{{ genre.DisplayName }}</button></li>
+            </ul>
+            <div class="tab-content">
+
+                <!--All Genre"-->
+                <div id="AllGenre" class="col-md-12 tab-pane fade in active">
+                    <!--row 1-->
+                    <div class="col-md-12 row-item-result">
+                        <div class="col-md-4 item-result" ng-repeat="song in songs">
+                            <div class="latest-content-info">
+                                <a href="">
+                                    <div class="conten">
+                                        <div class="Glyphicons-icon">
+                                            <span class="glyphicon glyphicon-cd" aria-hidden="true"></span>
+                                        </div>
+                                        <h4 class="serviceItem">{{ song.DisplayName }}</h4>
+                                        <button type="button" class="btn btn-success" ng-click="by(song._id, song.DisplayName, song.Price, song.AlbumId)">buy</button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!--row 1-->
+                </div><!--All Genre"-->
+
+                <!--{{ genre.DisplayName }}-->
+                <div id="tabGenre" class="tab-pane fade">
+                    <!--row 1-->
+                    <div class="col-md-12 row-item-result" >
+                        <div class="col-md-4 item-result" ng-repeat="genre in songsGenres">
+                            <div class="latest-content-info">
+                                <a href="">
+                                    <div class="conten">
+                                        <div class="Glyphicons-icon">
+                                            <span class="glyphicon glyphicon-cd" aria-hidden="true"></span>
+                                        </div>
+                                        <h4 class="serviceItem">{{ genre.DisplayName }}</h4>
+                                        <button type="button" class="btn btn-success" ng-click="by(genre._id, genre.DisplayName, genre.Price, genre.AlbumId)">buy</button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!--row 1-->
+                </div><!--//{{ genre.DisplayName }}-->
+
+                <!--{{ genre.DisplayName }} use ng-init>
+                <div ng-repeat="genre in genres" id="{{ genre._id }}" class="tab-pane fade">
+                    <div  ng-init="Genre = fn_load(genre._id)">
+                        <!--row 1>
+                        <div class="col-md-12 row-item-result" >
+                            <div class="col-md-4 item-result" ng-repeat="genre in songsGenre">
+                                <div class="latest-content-info">
+                                    <a href="">
+                                        <div class="conten">
+                                            <div class="icon">
+                                                <span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+                                            </div>
+                                            <h4>{{ genre.DisplayName }}</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> <!--row 1>
+                    </div>
+                </div><!--//{{ genre.DisplayName }}-->
+
+            </div>
+        </div><!--Genre-->
+    </div>
+</div>
